@@ -5,7 +5,6 @@ You can refer to the original [MySQL docs](https://dev.mysql.com/doc/employee/en
 
 These non-essential scripts are not ported yet:
 * employees_partitioned.sql
-* objects.sql
 * test_employees_sha.sql
 * sql_test.sh
 * sakila/
