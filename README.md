@@ -5,7 +5,6 @@ You can refer to the original [MySQL docs](https://dev.mysql.com/doc/employee/en
 
 These non-essential scripts are not ported yet:
 * employees_partitioned.sql
-* test_employees_sha.sql
 * sql_test.sh
 * sakila/
 
@@ -44,6 +43,14 @@ untouched, and use these issues as data cleaning exercises.
 After installing, you can run (You can ignore "NOTICE" outputs)
 
     mysql -q -f test_employees_md5.sql
+    # OR
+    mysql -q -f test_employees_sha.sql
+
+If you use test_employees_sha.sql, pgcrypto module (that is included in
+"postgresql-contrib" Linux package) should have been installed and you
+should use the database superuser role like "postgres". This test script
+recreates sha1() function. Beware if you have sha1() function already. This
+test script do not remove pgcrypto module at the end.
 
 For example:
 
